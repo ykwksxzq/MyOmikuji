@@ -5,19 +5,22 @@
   const result = document.getElementById('result')
 
   btn.addEventListener('click', () => {
-    const n = Math.floor(Math.random() * 3)
+    const results = ['大吉','中吉','凶','小吉'];
+    const n = Math.floor(Math.random() * results.length)
 
-    switch (n) {
-      case 0:
-        result.textContent = '大吉';
-        break;
-      case 1:
-        result.textContent = '中吉';
-        break;
-      case 2:
-        result.textContent = '凶';
-        break;
-    }
+    result.textContent = results[n];
+
+    // switch (n) {
+    //   case 0:
+    //     result.textContent = '大吉';
+    //     break;
+    //   case 1:
+    //     result.textContent = '中吉';
+    //     break;
+    //   case 2:
+    //     result.textContent = '凶';
+    //     break;
+    // }
 
   });
 }
